@@ -50,6 +50,10 @@ class Fragment_Main : Fragment() {
             findNavController().navigate(R.id.action_fragment_Main_to_fragment_Vet)
         }
 
+
+        view.iv_animal.setOnClickListener {
+            findNavController().navigate(R.id.action_fragment_Main_to_fragment_Animal)
+        }
         return view
     }
 

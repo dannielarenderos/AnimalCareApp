@@ -12,6 +12,7 @@
         <action android:id="@+id/action_fragment_Main_to_curiosidades" app:destination="@id/curiosidades"/>
         <action android:id="@+id/action_fragment_Main_to_enfermedades" app:destination="@id/enfermedades"/>
         <action android:id="@+id/action_fragment_Main_to_fragment_Vet" app:destination="@id/fragment_Vet"/>
+        <action android:id="@+id/action_fragment_Main_to_fragment_Animal" app:destination="@id/fragment_Animal"/>
     </fragment>
     <fragment android:id="@+id/fragment_laws" android:name="com.example.animalcare.fragments.fragment_leyes"
               android:label="fragment_laws" tools:layout="@layout/fragment_laws"/>
@@ -23,4 +24,6 @@
               android:label="fragment_enfermedades" tools:layout="@layout/fragment_enfermedades"/>
     <fragment android:id="@+id/fragment_Vet" android:name="com.example.animalcare.fragments.Fragment_Vet"
               android:label="fragment_vet" tools:layout="@layout/fragment_vet"/>
+    <fragment android:id="@+id/fragment_Animal" android:name="com.example.animalcare.fragments.Fragment_Animal"
+              android:label="fragment_animal" tools:layout="@layout/fragment_animal"/>
 </navigation>

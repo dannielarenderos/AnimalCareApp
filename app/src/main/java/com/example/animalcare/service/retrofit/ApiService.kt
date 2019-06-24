@@ -43,6 +43,18 @@ interface ApiService {
     @GET("/veterinaria/{vet}")
     fun getVet(@Path("vet")veterinaria:String): Deferred<Response<LiveData<List<vet_entity>>>>
 
+    @GET("/especie/")
+    fun getEspecies():  Deferred<Response<List<especie_entity>>>
+
+    @GET("/especie/{esp}")
+    fun getEspecieByName(@Path("esp")especie:String): Deferred<Response<LiveData<List<especie_entity>>>>
+
+    @GET("/especie/{esp}/")
+    fun getRazas(@Path("esp")especie:String):  Deferred<Response<List<Especie>>>
+
+    @GET("/especie/raza/{raz}")
+    fun getRaza(@Path("raz")raza:String): Deferred<Response<LiveData<List<raza_entity>>>>
+
 
     companion object{
         fun getAnimalService():ApiService = Retrofit.Builder()

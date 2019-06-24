@@ -11,13 +11,15 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-@Database(entities = [ley_entity::class, org_entity::class, enfermedad_entity::class ,curiosidad_entity::class ,vet_entity::class], version = 4, exportSchema = false)
+@Database(entities = [ley_entity::class, org_entity::class, enfermedad_entity::class ,curiosidad_entity::class ,vet_entity::class,raza_entity::class,especie_entity::class], version = 4, exportSchema = false)
 public abstract class RoomDB : RoomDatabase() {
     abstract fun leyDao(): ley_dao
     abstract fun orgDao(): org_dao
     abstract fun enferDao():enferm_dao
     abstract fun curDao():cur_dao
     abstract fun vetDao():vet_dao
+    abstract fun razaDao():raza_dao
+    abstract fun especieDao():especie_dao
 
 
     companion object {
@@ -45,7 +47,7 @@ public abstract class RoomDB : RoomDatabase() {
             super.onOpen(db)
             INSTANCE?.let { database ->
                 scope.launch(Dispatchers.IO) {
-                    populateDB(database.leyDao(), database.orgDao(),database.enferDao(),database.curDao(),database.vetDao())
+                    populateDB(database.leyDao(), database.orgDao(),database.enferDao(),database.curDao(),database.vetDao(),database.razaDao(),database.especieDao())
                 }
             }
         }
@@ -55,7 +57,9 @@ public abstract class RoomDB : RoomDatabase() {
             orgDao: org_dao,
             enferDao:enferm_dao,
             curDao:cur_dao,
-            vetDao:vet_dao
+            vetDao:vet_dao,
+            razaDao:raza_dao,
+            especieDao:especie_dao
 
         ) {
             leyDao.deleteAll()
@@ -63,6 +67,8 @@ public abstract class RoomDB : RoomDatabase() {
             enferDao.deleteAll()
             curDao.deleteAll()
             vetDao.deleteAll()
+            razaDao.deleteAll()
+            especieDao.deleteAll()
 
 
         }
