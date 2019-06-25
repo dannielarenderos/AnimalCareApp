@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".fragments.Fragment_Especie">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/hello_blank_fragment"/>
+    <ImageView
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_width="102dp"
+            android:layout_height="112dp" android:id="@+id/iv_perro" android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" android:layout_marginRight="268dp" android:layout_marginEnd="268dp"
+            android:layout_alignParentBottom="true" android:layout_marginBottom="496dp" android:layout_marginTop="123dp"
+            android:layout_alignParentTop="true"/>
+    <ImageView
+            android:src="@android:drawable/ic_lock_lock"
+            android:layout_width="115dp"
+            android:layout_height="108dp" android:id="@+id/iv_gato" android:layout_marginBottom="-142dp"
+            android:layout_alignBottom="@+id/iv_perro" android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" android:layout_marginRight="67dp" android:layout_marginEnd="67dp"
+            android:layout_alignParentStart="true" android:layout_marginLeft="229dp" android:layout_marginStart="229dp"
+            android:layout_alignParentLeft="true"/>
+
+</RelativeLayout>
