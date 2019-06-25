@@ -17,8 +17,10 @@
 
 
         <androidx.cardview.widget.CardView
-                android:layout_width="300dp"
+                android:layout_width="350dp"
 
+                app:cardCornerRadius="40dp"
+                app:cardElevation="@dimen/cardview_default_elevation"
                 app:cardBackgroundColor="@color/backgroundcolor"
                 android:layout_height="190dp"
                 android:layout_margin="10dp">
@@ -35,7 +37,7 @@
 
                 <ImageView
                         android:id="@+id/iv_raza"
-                        android:layout_width="176dp"
+                        android:layout_width="209dp"
                         android:layout_height="112dp"
                         android:background="@drawable/cercle"
                         android:src="@drawable/icon_curiosity"

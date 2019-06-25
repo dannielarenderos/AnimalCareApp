@@ -38,9 +38,6 @@ class EnfAdapter (var enfermedades:List<enfermedad_entity>): RecyclerView.Adapte
 
             this.tv_nomEnf.text=enfermedad.nombre_enf
             this.tv_tipoEnf.text=enfermedad.tipo_enf
-            this.tv_sintomasEnf.text=enfermedad.sintomas_enf
-            this.tv_tratamientoEnf.text=enfermedad.tratamiento_enf
-            this.tv_sintomasEnf.text=enfermedad.sintomas_enf
             this.tv_especieEnf.text=enfermedad.especia_enf
         }
     }

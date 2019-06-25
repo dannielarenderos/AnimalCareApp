@@ -48,7 +48,7 @@ class OrgAdapter(var orgs: List<org_entity>) : RecyclerView.Adapter<OrgAdapter.V
 
 
             this.tv_nombreOrg.text = org.nombre_org
-            this.tv_direccion.text = org.direccion_org
+            this.tv_telOrg.text = org.telefono_org
         }
     }
 }

@@ -21,8 +21,10 @@
         <androidx.cardview.widget.CardView
                 android:layout_width="350dp"
 
-                app:cardCornerRadius="@dimen/cardview_compat_inset_shadow"
+                app:cardCornerRadius="40dp"
                 app:cardElevation="@dimen/cardview_default_elevation"
+
+
                 app:cardBackgroundColor="@color/backgroundcolor"
                 android:layout_height="230dp"
                 android:layout_margin="10dp"
