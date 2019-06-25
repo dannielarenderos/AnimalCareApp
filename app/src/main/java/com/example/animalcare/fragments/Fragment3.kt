@@ -6,6 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProviders
+import com.example.animalcare.activities.MainActivity
+import com.example.animalcare.viewModels.ViewModelRoom
+import kotlinx.android.synthetic.main.fragment_especie_slide.view.*
 import kotlinx.android.synthetic.main.fragment_veterinaria_slide.view.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -27,8 +31,12 @@ class Fragment3 : Fragment() {
 
         val view = inflater.inflate(com.example.animalcare.R.layout.fragment_veterinaria_slide, container, false)
 
+        view.btnVeterinarias.setOnClickListener {
+            val intent = Intent(getActivity(), MainActivity::class.java)
+            startActivity(intent)
 
 
+        }
         return view
     }
 }

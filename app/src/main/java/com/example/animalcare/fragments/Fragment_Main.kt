@@ -35,7 +35,7 @@ class Fragment_Main : Fragment() {
 
 
 
-        view.iv_animals.setOnClickListener {
+        view.iv_enfermedades.setOnClickListener {
             findNavController().navigate(R.id.action_fragment_Main_to_enfermedades)
 
         }

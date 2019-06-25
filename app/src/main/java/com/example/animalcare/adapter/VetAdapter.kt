@@ -45,7 +45,7 @@ class VetAdapter(var vets:List<vet_entity>): RecyclerView.Adapter<VetAdapter.Vie
 
             this.tv_nombreVet.text = vet.nombre_vet
             this.tv_telefonoVet.text = vet.telefono_vet
-            this.tv_direccionVet.text = vet.telefono_vet
+
 
 
         }

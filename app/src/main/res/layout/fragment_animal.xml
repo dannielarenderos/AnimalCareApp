@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".fragments.Fragment_Animal">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+                tools:context=".fragments.Fragment_Animal">
 
     <androidx.recyclerview.widget.RecyclerView
+
+            android:padding="5dp"
+            app:cardCornerRadius="@dimen/cardview_compat_inset_shadow"
+            app:cardElevation="@dimen/cardview_default_elevation"
             android:id="@+id/rv_raza"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-</FrameLayout>
+            android:layout_width="388dp"
+            android:layout_height="549dp" android:layout_alignParentEnd="true" android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp" android:layout_marginEnd="12dp" android:layout_alignParentBottom="true"
+            android:layout_marginBottom="17dp"/>
+    <ImageView
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_width="wrap_content"
+            android:layout_height="133dp" android:id="@+id/imageView2" android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" android:layout_marginRight="201dp" android:layout_marginEnd="201dp"
+            android:layout_alignParentStart="true" android:layout_marginLeft="53dp" android:layout_marginStart="53dp"
+            android:layout_alignParentLeft="true" android:layout_above="@+id/rv_raza"
+            android:layout_marginBottom="26dp" android:layout_marginTop="6dp" android:layout_alignParentTop="true"/>
+</RelativeLayout>

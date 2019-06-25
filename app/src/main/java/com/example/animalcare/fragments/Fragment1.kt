@@ -33,27 +33,21 @@ class Fragment1 : Fragment() {
         val view = inflater.inflate(com.example.animalcare.R.layout.fragment_especie_slide, container, false)
 
 
+
         view.btnAnimales.setOnClickListener {
             val intent = Intent(getActivity(), MainActivity::class.java)
 
-
-            getActivity().apply {
-
-                intent.putExtra("Key", 1)
-                startActivity(intent)
-                viewModel = ViewModelProviders.of(this@Fragment1).get(ViewModelRoom::class.java)
-                viewModel.getFragmento(1)
-
-
-
-            }
-
-
-
-
+            startActivity(intent)
         }
 
+/*      getActivity().apply {
 
+    intent.putExtra("Key", 1)
+         startActivity(intent)
+
+        viewModel = ViewModelProviders.of(this@Fragment1).get(ViewModelRoom::class.java)
+         viewModel.getFragmento(1)
+*/
         return view
     }
 }

@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.animalcare.activities.MainActivity
+import kotlinx.android.synthetic.main.fragment_ley_slide.view.*
 import kotlinx.android.synthetic.main.fragment_organizacion_slide.view.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -27,7 +29,13 @@ class Fragment5 : Fragment() {
 
         val view = inflater.inflate(com.example.animalcare.R.layout.fragment_organizacion_slide, container, false)
 
-             
+
+        view.btnOrganizaciones.setOnClickListener {
+            val intent = Intent(getActivity(), MainActivity::class.java)
+            startActivity(intent)
+
+
+        }
         return view
     }
 }
