@@ -12,7 +12,7 @@
         <action android:id="@+id/action_fragment_Main_to_curiosidades" app:destination="@id/curiosidades"/>
         <action android:id="@+id/action_fragment_Main_to_enfermedades" app:destination="@id/enfermedades"/>
         <action android:id="@+id/action_fragment_Main_to_fragment_Vet" app:destination="@id/fragment_Vet"/>
-        <action android:id="@+id/action_fragment_Main_to_fragment_Animal" app:destination="@id/fragment_Animal"/>
+        <action android:id="@+id/action_fragment_Main_to_fragment_Especie" app:destination="@id/fragment_Especie"/>
     </fragment>
     <fragment android:id="@+id/fragment_laws" android:name="com.example.animalcare.fragments.fragment_leyes"
               android:label="fragment_laws" tools:layout="@layout/fragment_laws"/>
@@ -26,4 +26,11 @@
               android:label="fragment_vet" tools:layout="@layout/fragment_vet"/>
     <fragment android:id="@+id/fragment_Animal" android:name="com.example.animalcare.fragments.Fragment_Animal"
               android:label="fragment_animal" tools:layout="@layout/fragment_animal"/>
+    <fragment android:id="@+id/fragment_Gato" android:name="com.example.animalcare.fragments.Fragment_Gato"
+              android:label="fragment_gato" tools:layout="@layout/fragment_gato"/>
+    <fragment android:id="@+id/fragment_Especie" android:name="com.example.animalcare.fragments.Fragment_Especie"
+              android:label="fragment_especie" tools:layout="@layout/fragment_especie">
+        <action android:id="@+id/action_fragment_Especie_to_fragment_Gato" app:destination="@id/fragment_Gato"/>
+        <action android:id="@+id/action_fragment_Especie_to_fragment_Animal" app:destination="@id/fragment_Animal"/>
+    </fragment>
 </navigation>

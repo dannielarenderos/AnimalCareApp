@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.example.animalcare.R
+import com.example.animalcare.viewModels.ViewModelRoom
 import kotlinx.android.synthetic.main.fragment_main.view.*
 
 
@@ -21,6 +23,7 @@ private const val ARG_PARAM2 = "param2"
  *
  */
 class Fragment_Main : Fragment() {
+    lateinit var viewModel: ViewModelRoom
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,8 +33,11 @@ class Fragment_Main : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_main, container, false)
 
+
+
         view.iv_animals.setOnClickListener {
             findNavController().navigate(R.id.action_fragment_Main_to_enfermedades)
+
         }
 
         view.iv_laws.setOnClickListener {
@@ -52,7 +58,7 @@ class Fragment_Main : Fragment() {
 
 
         view.iv_animal.setOnClickListener {
-            findNavController().navigate(R.id.action_fragment_Main_to_fragment_Animal)
+            findNavController().navigate(R.id.action_fragment_Main_to_fragment_Especie)
         }
         return view
     }

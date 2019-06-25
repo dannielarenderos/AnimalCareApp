@@ -24,6 +24,17 @@ class ViewModelRoom(context: Application) : AndroidViewModel(context) {
     private val razaRepository: RazaRepository
 
 
+    public var fragmentPosition: Int = 0
+
+    fun getFragmento(pos:Int):Int{
+        fragmentPosition=pos
+        return fragmentPosition
+    }
+
+    fun returnFragmentPos():Int{
+        return fragmentPosition
+    }
+
     var allLaws: LiveData<List<ley_entity>>
     val listaLeyes = MutableLiveData<MutableList<ley_entity>>()
     var allOrgs: LiveData<List<org_entity>>
@@ -82,6 +93,8 @@ class ViewModelRoom(context: Application) : AndroidViewModel(context) {
         }
     }
 
+
+
     fun getAllLOrgs() = viewModelScope.launch(Dispatchers.IO) {
         val response = orgRepository.retrieveOrgs().await()
         if (response.isSuccessful) {
@@ -136,6 +149,7 @@ class ViewModelRoom(context: Application) : AndroidViewModel(context) {
             }
         }
     }
+
 
     fun getAllVet() = viewModelScope.launch(Dispatchers.IO) {
         val response = vetRepository.retrieveVets().await()
@@ -192,4 +206,43 @@ class ViewModelRoom(context: Application) : AndroidViewModel(context) {
                                         specie.raza.get(i).nutricion_raza
                                     )))
                         }} } } } }
+
+
+
+    fun gellAllRazasGato() = viewModelScope.launch(Dispatchers.IO) {
+        val response = razaRepository.retrieveRazas("Gato").await()
+        if (response.isSuccessful) {
+            with(response) {
+                this.body()?.forEach { specie ->
+                    println(specie.nombreEspecie)
+                    specie.raza.forEach { raza ->
+                        println(raza.nombre_raza)
+                        listaTodasEspecies.postValue(
+                            response.body()?.toMutableList() ?: arrayListOf(
+                                Especie(
+                                    "idDef",
+                                    "imgDef",
+                                    specie.raza
+                                )))
+
+                        for (i in 0..specie.raza.size) {
+
+                            listaTodasRazas.postValue(
+                                response.body()?.get(0)?.raza?.toMutableList() ?: arrayListOf(
+                                    raza_entity(
+                                        specie.raza.get(i).id,
+                                        specie.raza.get(i).img_raza,
+                                        specie.raza.get(i).nombre_raza,
+                                        specie.raza.get(i).origen_raza,
+                                        specie.raza.get(i).descripcion_raza,
+                                        specie.raza.get(i).pelo_raza,
+                                        specie.raza.get(i).aseo_raza,
+                                        specie.raza.get(i).tamanio_raza,
+                                        specie.raza.get(i).ruidoso_raza,
+                                        specie.raza.get(i).personalidad_raza,
+                                        specie.raza.get(i).salud_raza,
+                                        specie.raza.get(i).nutricion_raza
+                                    )))
+                        }} } } } }
+
 }
