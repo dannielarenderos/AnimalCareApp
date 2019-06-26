@@ -1,17 +1,15 @@
 package com.example.animalcare.adapter
 
-import android.util.Log
-import android.util.Log.d
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.animalcare.Constants
 import com.example.animalcare.R
-import com.example.animalcare.database.entities.ley_entity
 import com.example.animalcare.database.entities.org_entity
 import kotlinx.android.synthetic.main.cardiew_orgs.view.*
-import kotlinx.android.synthetic.main.cardview_leyes.view.*
 
 class OrgAdapter(var orgs: List<org_entity>) : RecyclerView.Adapter<OrgAdapter.ViewHolder>() {
 
@@ -26,6 +24,10 @@ class OrgAdapter(var orgs: List<org_entity>) : RecyclerView.Adapter<OrgAdapter.V
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(orgs[position])
+        holder.setItemClickListener(View.OnClickListener {
+            Constants.organizacion = orgs[position]
+            Navigation.findNavController(it).navigate(R.id.action_fragmento_Organizacion_to_frag_info_orgs)
+        })
     }
 
     fun updateList(newOrg: List<org_entity>) {
@@ -39,6 +41,10 @@ class OrgAdapter(var orgs: List<org_entity>) : RecyclerView.Adapter<OrgAdapter.V
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
+        fun setItemClickListener(onClickListener: View.OnClickListener) {
+            itemView.setOnClickListener{view -> onClickListener.onClick(view) }
+        }
+
         fun bind(org: org_entity) = with(itemView) {
 
             Glide.with(this)
@@ -47,8 +53,8 @@ class OrgAdapter(var orgs: List<org_entity>) : RecyclerView.Adapter<OrgAdapter.V
                 .into(imgv_org )
 
 
-            this.tv_nombreOrg.text = org.nombre_org
-            this.tv_telOrg.text = org.telefono_org
+            this.tv_nombreOrga.text = org.nombre_org
+
         }
     }
 }
