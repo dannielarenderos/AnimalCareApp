@@ -18,23 +18,24 @@ import com.example.animalcare.viewModels.ViewModelRoom
 
 
 private lateinit var recyclerView_: RecyclerView
-class Fragment_Vet : Fragment()  {
+
+class Fragment_Veterinarias : Fragment() {
 
 
     private lateinit var vetViewModel: ViewModelRoom
     private lateinit var vetAdapter: VetAdapter
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        val view = inflater.inflate(R.layout.fragment_vet, container, false)
-        recyclerView_= view.findViewById(R.id.rv_vet)
+        val view = inflater.inflate(R.layout.fragment_veterinarias, container, false)
+        recyclerView_ = view.findViewById(R.id.rv_vet)
         vetAdapter = VetAdapter(emptyList())
 
         recyclerView_.apply {
-            layoutManager = LinearLayoutManager(this@Fragment_Vet.context)
+            layoutManager = LinearLayoutManager(this@Fragment_Veterinarias.context)
             adapter = vetAdapter
         }
 

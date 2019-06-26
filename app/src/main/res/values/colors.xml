@@ -11,15 +11,11 @@
     <color name="org">#13D4E9</color>
     <color name="ley">#AA5EE5</color>
     <color name="enf">#057EF7</color>
-
     <color name="colorAccent">#E72626</color>
     <color name="darkblue">#23283a</color>
     <color name="testcolorblue">#152b38</color>
     <color name="pink">#71A2AE</color>
-
     <color name="animal">#FF281262</color>
     <color name="vet">#61BD1B</color>
-
-
     <color name="black_overlay">#66000000</color>
 </resources>

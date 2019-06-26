@@ -1,4 +1,4 @@
-package com.example.animalcare.fragments
+package com.example.animalcare.fragments_info
 
 
 import android.os.Bundle
@@ -8,15 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.animalcare.Constants
 import com.example.animalcare.R
-import com.example.animalcare.activities.GlideApp
 import com.example.animalcare.database.entities.enfermedad_entity
-import com.example.animalcare.database.entities.vet_entity
 import kotlinx.android.synthetic.main.fragment_frag_info_enf.view.*
 
 
 class frag_info_enf : Fragment() {
 
-    lateinit var enfermedadActual : enfermedad_entity
+    lateinit var enfermedadActual: enfermedad_entity
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)

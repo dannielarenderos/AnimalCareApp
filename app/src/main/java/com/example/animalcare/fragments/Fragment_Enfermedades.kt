@@ -16,15 +16,16 @@ import com.example.animalcare.adapter.EnfAdapter
 import com.example.animalcare.viewModels.ViewModelRoom
 
 private lateinit var recyclerView_: RecyclerView
-class Enfermedades : Fragment() {
+
+class Fragment_Enfermedades : Fragment() {
 
     lateinit var viewModel: ViewModelRoom
     lateinit var enfAdapter: EnfAdapter
 
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
         val view = inflater.inflate(R.layout.fragment_enfermedades, container, false)
@@ -32,7 +33,7 @@ class Enfermedades : Fragment() {
         enfAdapter = EnfAdapter(emptyList())
 
         recyclerView_.apply {
-            layoutManager = LinearLayoutManager(this@Enfermedades.context)
+            layoutManager = LinearLayoutManager(this@Fragment_Enfermedades.context)
             adapter = enfAdapter
         }
 

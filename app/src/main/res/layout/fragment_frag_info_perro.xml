@@ -3,7 +3,7 @@
              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".fragments.Frag_info_perro"
+             tools:context=".fragments_info.frag_info_perro"
              android:paddingBottom="30dp"
              android:background="#FFF"
 >

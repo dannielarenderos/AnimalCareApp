@@ -3,7 +3,7 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".fragments.frag_info_gato">
+             tools:context=".fragments_info.frag_info_gato">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

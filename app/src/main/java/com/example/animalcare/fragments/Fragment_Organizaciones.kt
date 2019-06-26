@@ -14,23 +14,23 @@ import com.example.animalcare.viewModels.ViewModelRoom
 
 private lateinit var recyclerViewOrg: RecyclerView
 
-class Fragmento_Organizacion : Fragment() {
+class Fragment_Organizaciones : Fragment() {
 
 
     private lateinit var OrgViewModel: ViewModelRoom
     private lateinit var OrgAdapter: OrgAdapter
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        val view = inflater.inflate(R.layout.fragment_fragmento__organizacion, container, false)
+        val view = inflater.inflate(R.layout.fragment_organizaciones, container, false)
         recyclerViewOrg = view.findViewById(R.id.rv_organizaciones)
         OrgAdapter = OrgAdapter(emptyList())
 
         recyclerViewOrg.apply {
-            layoutManager = LinearLayoutManager(this@Fragmento_Organizacion.context)
+            layoutManager = LinearLayoutManager(this@Fragment_Organizaciones.context)
             adapter = OrgAdapter
         }
 

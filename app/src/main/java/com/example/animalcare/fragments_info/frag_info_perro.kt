@@ -12,7 +12,7 @@ import com.example.animalcare.activities.GlideApp
 import com.example.animalcare.database.entities.raza_entity
 import kotlinx.android.synthetic.main.fragment_frag_info_perro.view.*
 
-class Frag_info_perro : Fragment() {
+class frag_info_perro : Fragment() {
     lateinit var mascotaActual: raza_entity
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -22,9 +22,9 @@ class Frag_info_perro : Fragment() {
         val view = inflater.inflate(R.layout.fragment_frag_info_perro, container, false).apply {
 
             GlideApp.with(this)
-                .load(mascotaActual.img_raza)
-                .placeholder(R.drawable.ic_launcher_background)
-                .into(this.img_perro)
+                    .load(mascotaActual.img_raza)
+                    .placeholder(R.drawable.ic_launcher_background)
+                    .into(this.img_perro)
 
             this.tv_nombrePerro.text = mascotaActual.nombre_raza
             this.tv_origenPerro.text = mascotaActual.origen_raza

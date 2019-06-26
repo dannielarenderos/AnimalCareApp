@@ -34,8 +34,8 @@ class Fragment_Gato : Fragment() {
 
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
         val view = inflater.inflate(R.layout.fragment_animal, container, false)
@@ -61,7 +61,8 @@ class Fragment_Gato : Fragment() {
 
 
         return view
-    }}
+    }
+}
 
 
 

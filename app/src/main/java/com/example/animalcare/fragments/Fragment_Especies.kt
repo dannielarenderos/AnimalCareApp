@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.animalcare.Constants
 import com.example.animalcare.R
-import kotlinx.android.synthetic.main.fragment_especie.view.*
+import kotlinx.android.synthetic.main.fragment_especies.view.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -21,25 +21,25 @@ private const val ARG_PARAM2 = "param2"
  * A simple [Fragment] subclass.
  *
  */
-class Fragment_Especie : Fragment() {
+class Fragment_Especies : Fragment() {
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-       val view=  inflater.inflate(R.layout.fragment_especie, container, false)
+        val view = inflater.inflate(R.layout.fragment_especies, container, false)
 
 
         view.iv_perro.setOnClickListener {
-            findNavController().navigate(R.id.action_fragment_Especie_to_fragment_Animal)
-            Constants.especie= "perro"
+            findNavController().navigate(R.id.action_fragment_Especies_to_fragment_Animal)
+            Constants.especie = "perro"
         }
 
 
         view.iv_gato.setOnClickListener {
-            findNavController().navigate(R.id.action_fragment_Especie_to_fragment_Gato)
-            Constants.especie= "gato"
+            findNavController().navigate(R.id.action_fragment_Especies_to_fragment_Gato)
+            Constants.especie = "gato"
         }
         return view
 

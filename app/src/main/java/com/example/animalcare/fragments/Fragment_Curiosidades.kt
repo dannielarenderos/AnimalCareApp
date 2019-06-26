@@ -17,15 +17,16 @@ import com.example.animalcare.viewModels.ViewModelRoom
 
 
 private lateinit var recyclerView_: RecyclerView
-class Curiosidades : Fragment() {
+
+class Fragment_Curiosidades : Fragment() {
 
     lateinit var viewModel: ViewModelRoom
     lateinit var curAdapter: CurAdapter
 
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
         val view = inflater.inflate(R.layout.fragment_curiosidades, container, false)
@@ -33,7 +34,7 @@ class Curiosidades : Fragment() {
         curAdapter = CurAdapter(emptyList())
 
         recyclerView_.apply {
-            layoutManager = LinearLayoutManager(this@Curiosidades.context)
+            layoutManager = LinearLayoutManager(this@Fragment_Curiosidades.context)
             adapter = curAdapter
         }
 

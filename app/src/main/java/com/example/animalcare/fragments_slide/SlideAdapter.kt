@@ -1,4 +1,4 @@
-package com.example.animalcare.activities
+package com.example.animalcare.fragments_slide
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

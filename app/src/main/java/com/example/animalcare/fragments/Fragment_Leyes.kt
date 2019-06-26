@@ -15,23 +15,23 @@ import com.example.animalcare.viewModels.ViewModelRoom
 
 private lateinit var recyclerView_: RecyclerView
 
-class fragment_leyes : Fragment() {
+class Fragment_Leyes : Fragment() {
 
     lateinit var viewModel: ViewModelRoom
     lateinit var leyAdapter: LeyAdapter
 
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        val view = inflater.inflate(R.layout.fragment_laws, container, false)
+        val view = inflater.inflate(R.layout.fragment_leyes, container, false)
         recyclerView_ = view.findViewById(R.id.rv_leyesMainAct)
         leyAdapter = LeyAdapter(emptyList())
 
         recyclerView_.apply {
-            layoutManager = LinearLayoutManager(this@fragment_leyes.context)
+            layoutManager = LinearLayoutManager(this@Fragment_Leyes.context)
             adapter = leyAdapter
         }
 

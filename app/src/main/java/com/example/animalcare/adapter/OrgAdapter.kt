@@ -9,12 +9,12 @@ import com.bumptech.glide.Glide
 import com.example.animalcare.Constants
 import com.example.animalcare.R
 import com.example.animalcare.database.entities.org_entity
-import kotlinx.android.synthetic.main.cardiew_orgs.view.*
+import kotlinx.android.synthetic.main.cardview_organizaciones.view.*
 
 class OrgAdapter(var orgs: List<org_entity>) : RecyclerView.Adapter<OrgAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.cardiew_orgs, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.cardview_organizaciones, parent, false)
         return ViewHolder(view)
     }
 
@@ -26,7 +26,7 @@ class OrgAdapter(var orgs: List<org_entity>) : RecyclerView.Adapter<OrgAdapter.V
         holder.bind(orgs[position])
         holder.setItemClickListener(View.OnClickListener {
             Constants.organizacion = orgs[position]
-            Navigation.findNavController(it).navigate(R.id.action_fragmento_Organizacion_to_frag_info_orgs)
+            Navigation.findNavController(it).navigate(R.id.action_fragment_organizaciones_to_frag_info_orgs)
         })
     }
 
@@ -42,16 +42,15 @@ class OrgAdapter(var orgs: List<org_entity>) : RecyclerView.Adapter<OrgAdapter.V
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun setItemClickListener(onClickListener: View.OnClickListener) {
-            itemView.setOnClickListener{view -> onClickListener.onClick(view) }
+            itemView.setOnClickListener { view -> onClickListener.onClick(view) }
         }
 
         fun bind(org: org_entity) = with(itemView) {
 
             Glide.with(this)
-                .load(org.img_org)
-                .placeholder(R.drawable.ic_launcher_background)
-                .into(imgv_org )
-
+                    .load(org.img_org)
+                    .placeholder(R.drawable.ic_launcher_background)
+                    .into(imgv_org)
 
             this.tv_nombreOrga.text = org.nombre_org
 

@@ -26,42 +26,36 @@ class Fragment_Main : Fragment() {
     lateinit var viewModel: ViewModelRoom
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
 
 
         val view = inflater.inflate(R.layout.fragment_main, container, false)
 
-
-
         view.iv_enfermedades.setOnClickListener {
-            findNavController().navigate(R.id.action_fragment_Main_to_enfermedades)
-
+            findNavController().navigate(R.id.action_fragment_Main_to_fragment_enfermedades)
         }
 
         view.iv_laws.setOnClickListener {
-            findNavController().navigate(R.id.action_fragment_main_to_fragment_laws)
+            findNavController().navigate(R.id.action_fragment_Main_to_fragment_leyes)
         }
 
         view.iv_associations.setOnClickListener {
-            findNavController().navigate(R.id.action_fragment_Main_to_fragmento_Organizacion)
+            findNavController().navigate(R.id.action_fragment_Main_to_fragment_organizaciones)
         }
 
         view.iv_facts.setOnClickListener {
-            findNavController().navigate(R.id.action_fragment_Main_to_curiosidades)
+            findNavController().navigate(R.id.action_fragment_Main_to_fragment_curiosidades)
         }
 
-        view.iv_vet.setOnClickListener{
-            findNavController().navigate(R.id.action_fragment_Main_to_fragment_Vet)
+        view.iv_vet.setOnClickListener {
+            findNavController().navigate(R.id.action_fragment_Main_to_fragment_veterinarias)
         }
-
 
         view.iv_animal.setOnClickListener {
-            findNavController().navigate(R.id.action_fragment_Main_to_fragment_Especie)
+            findNavController().navigate(R.id.action_fragment_Main_to_fragment_especies)
         }
         return view
     }
-
-
 }

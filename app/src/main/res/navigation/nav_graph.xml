@@ -1,56 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
-            app:startDestination="@id/fragment_Main">
-    <fragment android:id="@+id/fragment_Main" android:name="com.example.animalcare.fragments.Fragment_Main"
-              android:label="fragment_fragment__main" tools:layout="@layout/fragment_main">
-        <action app:destination="@id/fragment_laws" android:id="@+id/action_fragment_main_to_fragment_laws"/>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_Main">
+    <fragment
+        android:id="@+id/fragment_Main"
+        android:name="com.example.animalcare.fragments.Fragment_Main"
+        android:label="fragment_fragment__main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_fragment_Main_to_fragment_leyes"
+            app:destination="@id/fragment_leyes" />
 
-        <action android:id="@+id/action_fragment_Main_to_fragmento_Organizacion"
-                app:destination="@id/fragmento_Organizacion"/>
-        <action android:id="@+id/action_fragment_Main_to_curiosidades" app:destination="@id/curiosidades"/>
-        <action android:id="@+id/action_fragment_Main_to_enfermedades" app:destination="@id/enfermedades"/>
-        <action android:id="@+id/action_fragment_Main_to_fragment_Vet" app:destination="@id/fragment_Vet"/>
-        <action android:id="@+id/action_fragment_Main_to_fragment_Especie" app:destination="@id/fragment_Especie"/>
+        <action
+            android:id="@+id/action_fragment_Main_to_fragment_organizaciones"
+            app:destination="@id/fragment_organizaciones" />
+        <action
+            android:id="@+id/action_fragment_Main_to_fragment_curiosidades"
+            app:destination="@id/fragment_curiosidades" />
+        <action
+            android:id="@+id/action_fragment_Main_to_fragment_enfermedades"
+            app:destination="@id/fragment_enfermedades" />
+        <action
+            android:id="@+id/action_fragment_Main_to_fragment_veterinarias"
+            app:destination="@id/fragment_veterinarias" />
+        <action
+            android:id="@+id/action_fragment_Main_to_fragment_especies"
+            app:destination="@id/fragment_especies" />
     </fragment>
-    <fragment android:id="@+id/fragment_laws" android:name="com.example.animalcare.fragments.fragment_leyes"
-              android:label="fragment_laws" tools:layout="@layout/fragment_laws"/>
-    <fragment android:id="@+id/fragmento_Organizacion" android:name="com.example.animalcare.fragments.Fragmento_Organizacion"
-              android:label="fragment_fragmento__organizacion" tools:layout="@layout/fragment_fragmento__organizacion">
-        <action android:id="@+id/action_fragmento_Organizacion_to_frag_info_orgs" app:destination="@id/frag_info_orgs"/>
+    <fragment
+        android:id="@+id/fragment_leyes"
+        android:name="com.example.animalcare.fragments.Fragment_Leyes"
+        android:label="fragment_leyes"
+        tools:layout="@layout/fragment_leyes" />
+    <fragment
+        android:id="@+id/fragment_organizaciones"
+        android:name="com.example.animalcare.fragments.Fragment_Organizaciones"
+        android:label="fragment_organizaciones"
+        tools:layout="@layout/fragment_organizaciones">
+        <action
+            android:id="@+id/action_fragment_organizaciones_to_frag_info_orgs"
+            app:destination="@id/frag_info_orgs" />
     </fragment>
-    <fragment android:id="@+id/curiosidades" android:name="com.example.animalcare.fragments.Curiosidades"
-              android:label="fragment_curiosidades" tools:layout="@layout/fragment_curiosidades"/>
-    <fragment android:id="@+id/enfermedades" android:name="com.example.animalcare.fragments.Enfermedades"
-              android:label="fragment_enfermedades" tools:layout="@layout/fragment_enfermedades">
-        <action android:id="@+id/action_enfermedades_to_frag_info_enf" app:destination="@id/frag_info_enf"/>
+    <fragment
+        android:id="@+id/fragment_curiosidades"
+        android:name="com.example.animalcare.fragments.Fragment_Curiosidades"
+        android:label="fragment_curiosidades"
+        tools:layout="@layout/fragment_curiosidades" />
+    <fragment
+        android:id="@+id/fragment_enfermedades"
+        android:name="com.example.animalcare.fragments.Fragment_Enfermedades"
+        android:label="fragment_enfermedades"
+        tools:layout="@layout/fragment_enfermedades">
+        <action
+            android:id="@+id/action_fragment_enfermedades_to_frag_info_enf"
+            app:destination="@id/frag_info_enf" />
     </fragment>
-    <fragment android:id="@+id/fragment_Vet" android:name="com.example.animalcare.fragments.Fragment_Vet"
-              android:label="fragment_vet" tools:layout="@layout/fragment_vet">
-        <action android:id="@+id/action_fragment_Vet_to_frag_info_vet" app:destination="@id/frag_info_vet"/>
+    <fragment
+        android:id="@+id/fragment_veterinarias"
+        android:name="com.example.animalcare.fragments.Fragment_Veterinarias"
+        android:label="fragment_veterinarias"
+        tools:layout="@layout/fragment_veterinarias">
+        <action
+            android:id="@+id/action_fragment_veterinarias_to_frag_info_vet"
+            app:destination="@id/frag_info_vet" />
     </fragment>
-    <fragment android:id="@+id/fragment_Animal" android:name="com.example.animalcare.fragments.Fragment_Animal"
-              android:label="fragment_animal" tools:layout="@layout/fragment_animal">
-        <action android:id="@+id/action_fragment_Animal_to_frag_info_perro" app:destination="@id/frag_info_perro"/>
+    <fragment
+        android:id="@+id/fragment_Animal"
+        android:name="com.example.animalcare.fragments.Fragment_Animal"
+        android:label="fragment_animal"
+        tools:layout="@layout/fragment_animal">
+        <action
+            android:id="@+id/action_fragment_Animal_to_frag_info_perro"
+            app:destination="@id/frag_info_perro" />
     </fragment>
-    <fragment android:id="@+id/fragment_Gato" android:name="com.example.animalcare.fragments.Fragment_Gato"
-              android:label="fragment_gato" tools:layout="@layout/fragment_gato">
-        <action android:id="@+id/action_fragment_Gato_to_frag_info_gato" app:destination="@id/frag_info_gato"/>
+    <fragment
+        android:id="@+id/fragment_Gato"
+        android:name="com.example.animalcare.fragments.Fragment_Gato"
+        android:label="fragment_gato"
+        tools:layout="@layout/fragment_gato">
+        <action
+            android:id="@+id/action_fragment_Gato_to_frag_info_gato"
+            app:destination="@id/frag_info_gato" />
     </fragment>
-    <fragment android:id="@+id/fragment_Especie" android:name="com.example.animalcare.fragments.Fragment_Especie"
-              android:label="fragment_especie" tools:layout="@layout/fragment_especie">
-        <action android:id="@+id/action_fragment_Especie_to_fragment_Gato" app:destination="@id/fragment_Gato"/>
-        <action android:id="@+id/action_fragment_Especie_to_fragment_Animal" app:destination="@id/fragment_Animal"/>
+    <fragment
+        android:id="@+id/fragment_especies"
+        android:name="com.example.animalcare.fragments.Fragment_Especies"
+        android:label="fragment_especies"
+        tools:layout="@layout/fragment_especies">
+        <action
+            android:id="@+id/action_fragment_Especies_to_fragment_Gato"
+            app:destination="@id/fragment_Gato" />
+        <action
+            android:id="@+id/action_fragment_Especies_to_fragment_Animal"
+            app:destination="@id/fragment_Animal" />
     </fragment>
-    <fragment android:id="@+id/frag_info_perro" android:name="com.example.animalcare.fragments.Frag_info_perro"
-              android:label="fragment_frag_info_perro" tools:layout="@layout/fragment_frag_info_perro"/>
-    <fragment android:id="@+id/frag_info_gato" android:name="com.example.animalcare.fragments.frag_info_gato"
-              android:label="fragment_frag_info_gato" tools:layout="@layout/fragment_frag_info_gato"/>
-    <fragment android:id="@+id/frag_info_vet" android:name="com.example.animalcare.fragments.frag_info_vet"
-              android:label="fragment_frag_info_vet" tools:layout="@layout/fragment_frag_info_vet"/>
-    <fragment android:id="@+id/frag_info_enf" android:name="com.example.animalcare.fragments.frag_info_enf"
-              android:label="fragment_frag_info_enf" tools:layout="@layout/fragment_frag_info_enf"/>
-    <fragment android:id="@+id/frag_info_orgs" android:name="com.example.animalcare.fragments.frag_info_orgs"
-              android:label="fragment_frag_info_orgs" tools:layout="@layout/fragment_frag_info_orgs"/>
+    <fragment
+        android:id="@+id/frag_info_perro"
+        android:name="com.example.animalcare.fragments_info.frag_info_perro"
+        android:label="fragment_frag_info_perro"
+        tools:layout="@layout/fragment_frag_info_perro" />
+    <fragment
+        android:id="@+id/frag_info_gato"
+        android:name="com.example.animalcare.fragments_info.frag_info_gato"
+        android:label="fragment_frag_info_gato"
+        tools:layout="@layout/fragment_frag_info_gato" />
+    <fragment
+        android:id="@+id/frag_info_vet"
+        android:name="com.example.animalcare.fragments_info.frag_info_vet"
+        android:label="fragment_frag_info_vet"
+        tools:layout="@layout/fragment_frag_info_vet" />
+    <fragment
+        android:id="@+id/frag_info_enf"
+        android:name="com.example.animalcare.fragments_info.frag_info_enf"
+        android:label="fragment_frag_info_enf"
+        tools:layout="@layout/fragment_frag_info_enf" />
+    <fragment
+        android:id="@+id/frag_info_orgs"
+        android:name="com.example.animalcare.fragments_info.frag_info_orgs"
+        android:label="fragment_frag_info_orgs"
+        tools:layout="@layout/fragment_frag_info_orgs" />
 </navigation>

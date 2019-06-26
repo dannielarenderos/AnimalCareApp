@@ -5,8 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.viewpager.widget.ViewPager
 import com.example.animalcare.R
-import com.example.animalcare.fragments.Fragment1
-import com.example.animalcare.fragments.*
+import com.example.animalcare.fragments_slide.*
 
 class Main2Activity : AppCompatActivity() {
 
@@ -22,6 +21,7 @@ class Main2Activity : AppCompatActivity() {
         pagerAdapter!!.addFragments(Fragment4())
         pagerAdapter!!.addFragments(Fragment5())
         pagerAdapter!!.addFragments(Fragment6())
+        pagerAdapter!!.addFragments(FragmentInicio())
 
         val pager = findViewById<View>(R.id.vp_main) as ViewPager
 

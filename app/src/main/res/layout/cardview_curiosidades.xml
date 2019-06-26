@@ -1,64 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#fcfcfc"
-        android:id="@+id/ll">
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/backgroundcolor"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="@dimen/cardview_default_elevation">
 
-
-    <LinearLayout
-            android:gravity="center"
-            android:orientation="horizontal"
+    <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/backgroundcolor"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="@dimen/cardview_default_elevation" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="10dp" android:layout_marginRight="10dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp" android:layout_marginBottom="8dp">
 
 
-        <androidx.cardview.widget.CardView
-                android:layout_width="350dp"
+        <LinearLayout
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
 
-                app:cardCornerRadius="40dp"
-                app:cardElevation="@dimen/cardview_default_elevation"
-                app:cardBackgroundColor="@color/backgroundcolor"
-                android:layout_height="230dp"
-                android:layout_margin="10dp">
+            <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="77dp"
+                    android:background="@drawable/cercle"
+                    android:src="@drawable/icon_curiosity"/>
 
+            <TextView
+                    android:id="@+id/tv_curiosidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="Text"
+                    android:textSize="12dp"
+                    app:fontFamily="sans-serif-smallcaps"/>
+        </LinearLayout>
 
-            <LinearLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                <ImageView
-                        android:id="@+id/iv_raza"
-                        android:layout_width="122dp"
-                        android:layout_height="73dp"
-                        android:background="@drawable/cercle"
-                        android:src="@drawable/icon_curiosity"
-                />
-
-                <TextView
-                        android:layout_width="308dp"
-                        android:gravity="center"
-                        android:layout_height="100dp"
-                        android:textStyle="bold"
-                        android:textSize="15dp"
-
-                        android:id="@+id/tv_curiosidad"
-                        android:layout_marginTop="10dp"
-
-                        android:text="Razas"/>
-
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-
-    </LinearLayout>
-
-
-</LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:background="#FFF"
-             tools:context=".fragments.frag_info_orgs">
+             tools:context=".fragments_info.frag_info_orgs">
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
