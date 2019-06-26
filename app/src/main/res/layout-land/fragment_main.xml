@@ -1,78 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="#fcfcfc"
+        android:gravity="center"
         android:id="@+id/lnl">
-
-
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="#fcfcfc"
-            android:id="@+id/ll">
-
-
-        <LinearLayout
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-
-            <androidx.cardview.widget.CardView
-                    android:layout_width="300dp"
-
-                    app:cardBackgroundColor="@color/backgroundcolor"
-                    android:layout_height="150dp"
-                    android:layout_margin="10dp">
-
-
-                <LinearLayout
-
-                        android:layout_width="330dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
-
-                >
-
-                    <ImageView
-                            android:id="@+id/iv_mmmraza"
-                            android:layout_width="144dp"
-                            android:layout_height="65dp"
-                            android:background="@drawable/cercle_main"
-                            android:src="@drawable/icon_curiosity"
-                    />
-
-                    <TextView
-                            android:layout_width="236dp"
-                            android:gravity="center"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:textSize="22dp"
-
-                            android:id="@+id/tv_nombreRaza"
-                            android:layout_marginTop="10dp"
-
-                            android:text="Animal Care"/>
-
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
 
 
     <LinearLayout
@@ -82,6 +17,46 @@
             android:layout_height="wrap_content">
 
 
+        <androidx.cardview.widget.CardView
+                android:layout_width="140dp"
+                android:id="@+id/iv_vet"
+                app:cardBackgroundColor="@color/backgroundcolor"
+                android:layout_height="150dp"
+                android:layout_margin="10dp">
+
+
+            <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+
+            >
+
+                <ImageView
+                        android:id="@+id/iv_raza"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/cercle_main"
+                        android:src="@drawable/icon_vet"
+                />
+
+                <TextView
+                        android:layout_width="136dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="22dp"
+
+                        android:id="@+id/tv_nombreRzzaxza"
+                        android:layout_marginTop="10dp"
+
+                        android:text="Veterinarias"/>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
                 android:layout_width="140dp"
                 android:id="@+id/iv_animal"
@@ -177,7 +152,7 @@
 
         <androidx.cardview.widget.CardView
                 android:layout_width="140dp"
-                android:id="@+id/iv_vet"
+                android:id="@+id/iv_associations"
                 app:cardBackgroundColor="@color/backgroundcolor"
                 android:layout_height="150dp"
                 android:layout_margin="10dp">
@@ -193,11 +168,11 @@
             >
 
                 <ImageView
-                        android:id="@+id/iv_raza"
+                        android:id="@+id/iv_razza"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:background="@drawable/cercle_main"
-                        android:src="@drawable/icon_vet"
+                        android:src="@drawable/icon_org"
                 />
 
                 <TextView
@@ -207,15 +182,54 @@
                         android:textStyle="bold"
                         android:textSize="22dp"
 
-                        android:id="@+id/tv_nombreRzzaxza"
+                        android:id="@+id/tv_nombreRaxza"
                         android:layout_marginTop="10dp"
 
-                        android:text="Veterinarias"/>
+                        android:text="Organización"/>
 
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+                android:layout_width="140dp"
+                android:id="@+id/iv_facts"
+                app:cardBackgroundColor="@color/backgroundcolor"
+                android:layout_height="150dp"
+                android:layout_margin="10dp">
 
+
+            <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+
+            >
+
+                <ImageView
+                        android:id="@+id/nxxxzn"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/cercle_main"
+                        android:src="@drawable/icon_curiosity"
+                />
+
+                <TextView
+                        android:layout_width="136dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="22dp"
+
+                        android:id="@+id/bxxb"
+                        android:layout_marginTop="10dp"
+
+                        android:text="Curiosidades"/>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
                 android:layout_width="140dp"
                 android:id="@+id/iv_laws"
@@ -259,103 +273,6 @@
 
 
     </LinearLayout>
-
-
-    <LinearLayout
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-        <androidx.cardview.widget.CardView
-                android:layout_width="140dp"
-                android:id="@+id/iv_associations"
-                app:cardBackgroundColor="@color/backgroundcolor"
-                android:layout_height="150dp"
-                android:layout_margin="10dp">
-
-
-            <LinearLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center"
-
-            >
-
-                <ImageView
-                        android:id="@+id/iv_razza"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/cercle_main"
-                        android:src="@drawable/icon_org"
-                />
-
-                <TextView
-                        android:layout_width="136dp"
-                        android:gravity="center"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="22dp"
-
-                        android:id="@+id/tv_nombreRaxza"
-                        android:layout_marginTop="10dp"
-
-                        android:text="Organización"/>
-
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-                android:layout_width="140dp"
-                android:id="@+id/iv_facts"
-                app:cardBackgroundColor="@color/backgroundcolor"
-                android:layout_height="150dp"
-                android:layout_margin="10dp">
-
-
-            <LinearLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center"
-
-            >
-
-                <ImageView
-                        android:id="@+id/nxxxzn"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/cercle_main"
-                        android:src="@drawable/icon_curiosity"
-                />
-
-                <TextView
-                        android:layout_width="136dp"
-                        android:gravity="center"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="22dp"
-
-                        android:id="@+id/bxxb"
-                        android:layout_marginTop="10dp"
-
-                        android:text="Curiosidades"/>
-
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-
-    </LinearLayout>
-
-
-
-
 
 
 </LinearLayout>
