@@ -19,35 +19,16 @@
             app:cardCornerRadius="@dimen/cardview_compat_inset_shadow"
             app:cardElevation="@dimen/cardview_default_elevation"
             android:id="@+id/rv_raza"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="629dp"
+            android:layout_height="297dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
 
 
-            >
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.58" app:layout_constraintVertical_bias="0.377">
     </androidx.recyclerview.widget.RecyclerView>
-
-
-    <fragment
-
-            android:name="com.example.animalcare.fragments.Fragment1"
-            android:id="@+id/fragment2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-    <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
