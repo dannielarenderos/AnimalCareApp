@@ -1,4 +1,4 @@
-package com.example.animalcare.fragments
+package com.example.animalcare.fragments_info
 
 
 import android.os.Bundle
@@ -10,9 +10,7 @@ import com.example.animalcare.Constants
 import com.example.animalcare.R
 import com.example.animalcare.activities.GlideApp
 import com.example.animalcare.database.entities.raza_entity
-import com.example.animalcare.database.entities.vet_entity
 import kotlinx.android.synthetic.main.fragment_frag_info_perro.view.*
-import kotlinx.android.synthetic.main.fragment_frag_info_vet.view.*
 
 class Frag_info_perro : Fragment() {
     lateinit var mascotaActual: raza_entity
