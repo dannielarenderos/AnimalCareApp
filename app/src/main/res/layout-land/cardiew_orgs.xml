@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="#fcfcfc"
+        android:id="@+id/ll">
+
+
+    <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="643dp"
+            android:layout_height="263dp">
+
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="389dp"
+
+                app:cardCornerRadius="40dp"
+                app:cardElevation="@dimen/cardview_default_elevation"
+                app:cardBackgroundColor="@color/backgroundcolor"
+                android:layout_height="230dp"
+                android:layout_margin="10dp"
+        >
+
+
+            <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+
+            >
+
+                <ImageView
+                        android:id="@+id/imgv_org"
+                        android:layout_width="180dp"
+                        android:layout_height="97dp"
+                        android:background="@drawable/cercle_org"
+                        android:src="@drawable/icon_curiosity"
+                />
+
+
+                <TextView
+                        android:layout_width="266dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:id="@+id/tv_nombreOrg"
+                        android:textSize="18dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Organizaciones cuidado animal"/>
+                <LinearLayout
+
+
+                        android:layout_width="332dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                    <TextView
+                            android:layout_width="147dp"
+                            android:textSize="17dp"
+                            android:padding="10dp"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:id="@+id/tv_nombreARaza"
+                            android:layout_marginTop="10dp"
+                            android:text="Contacto:"/>
+
+
+                    <TextView
+                            android:layout_width="153dp"
+                            android:textSize="17dp"
+                            android:padding="10dp"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:id="@+id/tv_telOrg"
+                            android:layout_marginTop="10dp"
+                            android:text="Orgs"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
