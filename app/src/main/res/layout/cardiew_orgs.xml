@@ -52,45 +52,11 @@
                         android:gravity="center"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:id="@+id/tv_nombreOrg"
+                        android:id="@+id/tv_nombreOrga"
                         android:textSize="18dp"
                         android:layout_marginTop="10dp"
                         android:text="Organizaciones cuidado animal"/>
 
-
-                <LinearLayout
-
-
-                        android:layout_width="332dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center">
-
-                    <TextView
-                            android:layout_width="147dp"
-                            android:textSize="17dp"
-                            android:padding="10dp"
-                            android:gravity="center"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:id="@+id/tv_nombreARaza"
-                            android:layout_marginTop="10dp"
-                            android:text="Contacto:"/>
-
-
-                    <TextView
-                            android:layout_width="153dp"
-                            android:textSize="17dp"
-                            android:padding="10dp"
-                            android:gravity="center"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:id="@+id/tv_telOrg"
-                            android:layout_marginTop="10dp"
-                            android:text="Orgs"/>
-
-
-                </LinearLayout>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
