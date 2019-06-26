@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.animalcare.Constants
 import com.example.animalcare.R
 import kotlinx.android.synthetic.main.fragment_especie.view.*
 
@@ -32,11 +33,13 @@ class Fragment_Especie : Fragment() {
 
         view.iv_perro.setOnClickListener {
             findNavController().navigate(R.id.action_fragment_Especie_to_fragment_Animal)
+            Constants.especie= "perro"
         }
 
 
         view.iv_gato.setOnClickListener {
             findNavController().navigate(R.id.action_fragment_Especie_to_fragment_Gato)
+            Constants.especie= "gato"
         }
         return view
 

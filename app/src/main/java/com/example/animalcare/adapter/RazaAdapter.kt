@@ -4,9 +4,14 @@ import android.opengl.EGL14
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.animalcare.Constants
 import com.example.animalcare.R
+import com.example.animalcare.database.entities.especie_entity
 import com.example.animalcare.database.entities.ley_entity
 import com.example.animalcare.database.entities.raza_entity
 import com.example.animalcare.service.retrofit.Especie
@@ -21,6 +26,20 @@ class RazaAdapter(var raza: MutableList<raza_entity>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         holder.bind(raza[position])
+
+
+
+        if(Constants.especie=="perro"){
+        holder.setItemClickListener(View.OnClickListener {
+            Constants.mascota = raza[position]
+            Navigation.findNavController(it).navigate(R.id.action_fragment_Animal_to_frag_info_perro)
+        })}else{
+
+        holder.setItemClickListener(View.OnClickListener {
+            Constants.mascota = raza[position]
+            Navigation.findNavController(it).navigate(R.id.action_fragment_Gato_to_frag_info_gato)
+        })}
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RazaAdapter.ViewHolder {
@@ -44,6 +63,11 @@ class RazaAdapter(var raza: MutableList<raza_entity>) :
 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun setItemClickListener(onClickListener: View.OnClickListener) {
+            itemView.setOnClickListener{view -> onClickListener.onClick(view) }
+
+        }
+
 
         fun bind(raza: raza_entity) = with(itemView) {
             Glide.with(this)

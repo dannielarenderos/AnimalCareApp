@@ -9,11 +9,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.animalcare.R
 import com.example.animalcare.adapter.RazaAdapter
 import com.example.animalcare.viewModels.ViewModelRoom
+import kotlinx.android.synthetic.main.fragment_animal.view.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -55,6 +57,8 @@ class Fragment_Gato : Fragment() {
                 Log.v("Raza", razas.personalidad_raza)
             }
         })
+
+
 
         return view
     }}

@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.fragment_frag_info_vet.*
 import kotlinx.android.synthetic.main.fragment_frag_info_vet.view.*
 
 
-lateinit var veterinariaActual : vet_entity
+
 
 
 class frag_info_vet : Fragment() {
