@@ -3,8 +3,10 @@ package com.example.animalcare.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.animalcare.Constants
 import com.example.animalcare.R
 import com.example.animalcare.database.entities.vet_entity
 import kotlinx.android.synthetic.main.cardview_vet.view.*
@@ -22,6 +24,10 @@ class VetAdapter(var vets:List<vet_entity>): RecyclerView.Adapter<VetAdapter.Vie
 
     override fun onBindViewHolder(holder: ViewHolder,position:Int){
         holder.bind(vets[position])
+        holder.setItemClickListener(View.OnClickListener {
+            Constants.veterinaria = vets[position]
+            Navigation.findNavController(it).navigate(R.id.action_fragment_Vet_to_frag_info_vet)
+        })
     }
 
     fun updateList(newVet : List<vet_entity>){
@@ -34,6 +40,10 @@ class VetAdapter(var vets:List<vet_entity>): RecyclerView.Adapter<VetAdapter.Vie
     }
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+
+        fun setItemClickListener(onClickListener: View.OnClickListener) {
+            itemView.setOnClickListener{view -> onClickListener.onClick(view) }
+        }
 
         fun bind(vet: vet_entity) = with(itemView){
 
